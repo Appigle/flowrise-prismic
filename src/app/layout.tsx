@@ -58,6 +58,9 @@ export default function RootLayout({
         <div className="fixed bg-gradient-to-b from-[#ECECE0] to-cyan-80 z-[-1] inset-0 opacity-50" />
         <PrismicPreview repositoryName={repositoryName} />
         <EmbeddedMessaging />
+        <div className="fixed top-10 right-10 text-lg text-red-500 border-sky-100 border-2 rounded-full p-2 bg-sky-200 border-spacing-2 w-fit px-4">
+          Ray&apos;s Prismic Medcan Test site ...
+        </div>
       </body>
     </html>
   );
