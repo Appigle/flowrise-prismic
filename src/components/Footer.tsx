@@ -1,13 +1,20 @@
+import Bounded from "@/components/Bounded";
+import Logo from "@/components/Logo";
 import { createClient } from "@/prismicio";
 import { PrismicNextLink } from "@prismicio/next";
 import Link from "next/link";
-import Logo from "@/components/Logo";
-import Bounded from "@/components/Bounded";
 
 export default async function Footer() {
   const client = createClient();
 
-  const settings = await client.getSingle("settings");
+  // const settings = await client.getSingle("settings");
+  // mock settings data
+  const settings = {
+    data: {
+      site_title: "Medcan",
+      navigation: [],
+    },
+  };
 
   return (
     <Bounded as="footer">

@@ -1,13 +1,20 @@
+import Bounded from "@/components/Bounded";
+import Logo from "@/components/Logo";
 import { createClient } from "@/prismicio";
 import { PrismicNextLink } from "@prismicio/next";
 import Link from "next/link";
-import Bounded from "@/components/Bounded";
-import Logo from "@/components/Logo";
 
 export default async function Header() {
   const client = createClient();
 
-  const settings = await client.getSingle("settings");
+  // const settings = await client.getSingle("settings");
+  // mock settings data
+  const settings = {
+    data: {
+      site_title: "Medcan",
+      navigation: [],
+    },
+  };
 
   return (
     <Bounded as="header" className="py-4 md:py-6 lg:py-8">
